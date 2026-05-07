@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Certificate Verification | TIS{% endblock %}
+
+{% block content %}
+<section class="py-5 cert-page-section">
+  <div class="container">
+
+    <h2 class="fw-bold text-center mb-4 text-primary">
+      Certificate Verification Result
+    </h2>
+
+    <!-- STATUS ALERT -->
+    {% if status == "valid" %}
+      <div class="alert alert-success text-center shadow-sm">
+        ✅ <strong>Certificate Verified</strong>
+      </div>
+
+    {% elif status == "expired" %}
+      <div class="alert alert-warning text-center shadow-sm">
+        ⚠ Certificate validity expired on <strong>{{ certificate.expiry_date }}</strong>
+      </div>
+
+    {% elif status == "not_found" %}
+      <div class="alert alert-danger text-center shadow-sm">
+        ❌ Invalid certificate number
+      </div>
+    {% endif %}
+
+    <!-- CERTIFICATE DETAILS -->
+    {% if certificate %}
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-8">
+
+          <div class="tis-verify-card">
+
+            <!-- Watermark Logo -->
+            <img src="{% static 'images/logo.png' %}" class="tis-watermark">
+
+            <!-- Header -->
+            <div class="tis-verify-header text-center">
+              <i class="fa-solid fa-circle-check tis-icon"></i>
+              <h4 class="fw-bold mt-2">Verification Details</h4>
+              <div class="tis-divider"></div>
+            </div>
+
+            <!-- Info Grid -->
+            <div class="tis-info-grid">
+
+              <div class="tis-field">
+                <span>Certificate Number</span>
+                <strong>{{ certificate.certificate_number }}</strong>
+              </div>
+
+              <div class="tis-field">
+                <span>Company Name</span>
+                <strong>{{ certificate.company_name }}</strong>
+              </div>
+
+              <div class="tis-field">
+                <span>Standard</span>
+                <strong>{{ certificate.standard }}</strong>
+              </div>
+
+              <div class="tis-field">
+                <span>Issue Date</span>
+                <strong>{{ certificate.issue_date }}</strong>
+              </div>
+
+              <div class="tis-field">
+                <span>Expiry Date</span>
+                <strong>{{ certificate.expiry_date }}</strong>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+
+  </div>
+</section>
+{% endblock %}

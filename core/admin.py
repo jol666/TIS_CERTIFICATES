@@ -1,0 +1,15 @@
+from django.contrib import admin
+
+# Register your models here.
+from django.contrib import admin
+from .models import Certificate
+
+@admin.register(Certificate)
+class CertificateAdmin(admin.ModelAdmin):
+    list_display = (
+        "certificate_number",
+        "company_name",
+        "standard",
+        "expiry_date"
+    )
+    search_fields = ("certificate_number", "company_name")

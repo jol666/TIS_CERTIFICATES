@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ISO Certifications | TIS Certification{% endblock %}
+
+{% block extra_css %}
+{# Keep this only if Font Awesome is NOT already included in base.html #}
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Certifications Hero (page-specific) -->
+<section class="cert-hero text-center text-white py-5">
+  <div class="container py-4">
+    <h1 class="fw-bold display-5 mb-3">ISO Certifications</h1>
+    <p class="lead mb-0" style="text-align: center;">
+      We help organizations achieve globally recognized ISO certifications that build trust, improve performance,
+      and strengthen compliance.
+    </p>
+    <p class="lead mb-0" style="text-align: center;">
+          ISO certification demonstrates that your organization follows internationally accepted best practices
+          for quality, safety, security, environment, continuity, and more. TIS Certification provides impartial,
+          reliable assessment and certification services to help your business compete confidently in global markets.
+        </p>
+  </div>
+</section>
+
+<!-- Certifications Content -->
+<section class="cert-page-section py-5">
+  <div class="container">
+
+    <!-- Intro -->
+
+
+    <!-- Categories -->
+    <div class="row g-4 cert-grid" style="align-content: center;display: flex;justify-content: center;">
+
+      <!-- Management System Certifications -->
+      <div class="col-md-6 col-lg-4">
+        <div class="cert-card h-100">
+          <div class="cert-card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="cert-card-icon me-3">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <h5 class="cert-card-title mb-0" style="color: #0f2385; font-weight: bold;">Management System Certifications</h5>
+            </div>
+            <p class="cert-card-text small text-muted">
+              Core ISO standards that strengthen the way your organization operates and delivers value.
+            </p>
+            <ul class="list-unstyled cert-links mt-3">
+              <ul><li><a href="{% url 'iso_9001' %}">ISO 9001 – Quality Management Systems</a></li></ul>
+             <ul> <li><a href="{% url 'iso_14001' %}">ISO 14001 – Environmental Management Systems</a></li></ul>
+              <ul><li><a href="{% url 'iso_45001' %}">ISO 45001 – Occupational Health & Safety</a></li></ul>
+             <ul> <li><a href="{% url 'iso_41001' %}">ISO 41001 – Facility Management</a></li></ul>
+        <!-- <ul> <li><a href="{% url 'iso_50001' %}">ISO 50001 – Energy Management Systems</a></li></ul>
+             <ul> <li><a href="{% url 'iso_21001' %}">ISO 21001 – Educational Organizations</a></li></ul> -->
+             <ul> <li><a href="{% url 'iso_22301' %}">ISO 22301 – Business Continuity Management</a></li></ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Information Security & IT Service -->
+      <div class="col-md-6 col-lg-4">
+        <div class="cert-card h-100">
+          <div class="cert-card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="cert-card-icon me-3">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h5 class="cert-card-title mb-0" style="color: #0f2385; font-weight: bold;">Information Security & IT Service</h5>
+            </div>
+            <p class="cert-card-text small text-muted">
+              Protect information assets, privacy, and ensure continuity of IT services.
+            </p>
+            <ul class="list-unstyled cert-links mt-3">
+              <ul><li><a href="{% url 'iso_27001' %}">ISO/IEC 27001 – Information Security Management</a></li></ul>
+          <!--    <ul><li><a href="{% url 'iso_iec_27001' %}">ISO/IEC 27001 (Extended)</a></li></ul>
+              <ul><li><a href="{% url 'iso_27701' %}">ISO/IEC 27701 – Privacy Information Management</a></li></ul> -->
+              <ul><li><a href="{% url 'iso_20000_1' %}">ISO 20000-1 – IT Service Management</a></li></ul>
+             <ul><li><a href="{% url 'iso_42001' %}">ISO 42001 – Artificial Intelligence Management</a></li></ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Food Safety & Medical -->
+      <div class="col-md-6 col-lg-4">
+        <div class="cert-card h-100">
+          <div class="cert-card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="cert-card-icon me-3">
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <h5 class="cert-card-title mb-0" style="color: #0f2385; font-weight: bold;">Food Safety & Medical</h5>
+            </div>
+            <p class="cert-card-text small text-muted">
+              Certifications for safe food production and medical device quality.
+            </p>
+            <ul class="list-unstyled cert-links mt-3">
+             <ul> <li><a href="{% url 'iso_22000' %}">ISO 22000 – Food Safety Management</a></li></ul>
+             <ul> <li><a href="{% url 'HACCP' %}">HACCP – Hazard Analysis & Critical Control Points</a></li></ul>
+         <!--    <ul> <li><a href="{% url 'FoodSafetycertification' %}">Food Safety Certification</a></li></ul>
+             <ul> <li><a href="{% url 'iso_13485' %}">ISO 13485 – Medical Devices</a></li></ul> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anti-Bribery & Compliance -->
+   <!--   <div class="col-md-6 col-lg-4">
+        <div class="cert-card h-100">
+          <div class="cert-card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="cert-card-icon me-3">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <h5 class="cert-card-title mb-0" style="color: #0f2385; font-weight: bold;">Anti-Bribery & Compliance</h5>
+            </div>
+            <p class="cert-card-text small text-muted">
+              Strengthen integrity, transparency, and ethical business conduct.
+            </p>
+            <ul class="list-unstyled cert-links mt-3">
+             <ul> <li><a href="{% url 'iso_37001' %}">ISO 37001 – Anti-Bribery Management Systems</a></li></ul>
+            </ul>
+          </div>
+        </div>
+      </div>  -->
+
+      <!-- Product Certifications -->
+    <!--  <div class="col-md-6 col-lg-4">
+        <div class="cert-card h-100">
+          <div class="cert-card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="cert-card-icon me-3">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h5 class="cert-card-title mb-0" style="color: #0f2385; font-weight: bold;">Product Certifications</h5>
+            </div>
+            <p class="cert-card-text small text-muted">
+              Demonstrate conformance of products to safety and performance standards.
+            </p>
+            <ul class="list-unstyled cert-links mt-3">
+              <ul><li><a href="{% url 'ISO8124' %}">ISO 8124 – Safety of Toys</a></li></ul>
+             <ul><li><a href="{% url 'CE' %}">CE Marking</a></li></ul>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Audits & Training Services -->
+      <div class="col-md-6 col-lg-4">
+        <div class="cert-card h-100">
+          <div class="cert-card-body">
+            <div class="d-flex align-items-center mb-3">
+              <div class="cert-card-icon me-3">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <h5 class="cert-card-title mb-0" style="color: #0f2385; font-weight: bold;">Audits & Training</h5>
+            </div>
+            <p class="cert-card-text small text-muted">
+              Support services to strengthen implementation, awareness and effectiveness.
+            </p>
+            <ul class="list-unstyled cert-links mt-3">
+              <ul><li><a href="{% url 'energyaudit' %}">Energy Audit</a></li></ul>
+              <ul><li><a href="{% url 'safetyaudit' %}">Safety Audit</a></li></ul>
+             <ul> <li><a href="{% url 'ISOawarenesstraining' %}">ISO Awareness Training</a></li></ul>
+              <ul><li><a href="{% url 'LeadAuditorTraining' %}">Lead Auditor Training</a></li></ul>
+              <ul><li><a href="{% url 'InternalAuditorTraining' %}">Internal Auditor Training</a></li></ul>
+              <ul><li><a href="{% url 'ISOtraining' %}">ISO Training Programs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="row mt-5">
+      <div class="col text-center">
+        <h4 class="cert-cta-title text-primary mb-3">Ready to Start Your Certification Journey?</h4>
+        <p class="cert-cta-text text-muted mb-4">
+          Share your requirements with us and our team will guide you on the most suitable ISO standard and certification path.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-primary px-4">Talk to Our Team</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

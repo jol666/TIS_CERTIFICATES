@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home | TIS Certification{% endblock %}
+
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-angled position-relative overflow-hidden">
+  <div class="container-fluid px-5 py-5">
+    <div class="row align-items-center">
+      <!-- Left Text -->
+      <div class="col-lg-6 text-white hero-content">
+        <h class="display-5 fw-bold mb-4">
+          Our Consultation is Always  <br> in Sync With Your Strategy
+        </h>
+        <p class="lead mb-4">
+          TIS Certification provides internationally recognized ISO certification services
+          that help organizations demonstrate quality, efficiency, and reliability.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-light btn-lg me-3" style="font-size: small;font-weight: bold;margin-bottom: 25px;">Get Certified</a>
+        <a href="{% url 'about' %}" class="btn btn-outline-light btn-lg" style="font-size: small;font-weight: bold;margin-bottom: 25px;">Learn More</a>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6 text-center">
+        <img src="{% static 'images/hero-certification.png' %}"
+             class="img-fluid hero-image rounded-4 shadow-lg"
+             alt="Certification Meeting">
+      </div>
+    </div>
+  </div>
+  <!-- Angled Background Shape -->
+  <div class="angled-bg"></div>
+</section>
+
+
+
+
+<!-- About Section -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2  style="color: #0F2385; font-weight: bolder;">About TIS Certification</h2>
+    <p class="lead mb-4;" style="font-size: medium;">
+      We are an independent certification body helping organizations meet global standards.
+      Our experts ensure every client achieves internationally accepted quality management practices.
+    </p>
+    <a href="{% url 'about' %}" class="btn custom-readmore-btn">Read More</a>
+  </div>
+</section>
+
+
+
+<!-- Clients Carousel Section -->
+
+<section class="py-5" style="background: linear-gradient(
+    135deg,
+    rgba(15, 35, 133, 0.75),  /* Deep blue with transparency */
+    rgba(0, 33, 4, 0.75)  )">
+  <div class=" text-center">
+    <h2 class="fw-bold text-white">Our Clients</h2>
+
+    <div class="clients-slider">
+      <div class="clients-track">
+        <!-- All client logos -->
+        <img src="{% static 'images/clients/image001.gif' %}" alt="Client 1" class="client-logo">
+        <img src="{% static 'images/clients/image002.jpg' %}" alt="Client 2" class="client-logo">
+        <img src="{% static 'images/clients/image003.png' %}" alt="Client 3" class="client-logo">
+        <img src="{% static 'images/clients/image004.png' %}" alt="Client 4" class="client-logo">
+        <img src="{% static 'images/clients/image005.jpg' %}" alt="Client 5" class="client-logo">
+        <img src="{% static 'images/clients/image006.jpg' %}" alt="Client 6" class="client-logo">
+        <img src="{% static 'images/clients/image007.png' %}" alt="Client 7" class="client-logo">
+        <img src="{% static 'images/clients/image008.png' %}" alt="Client 8" class="client-logo">
+        <img src="{% static 'images/clients/image009.jpg' %}" alt="Client 9" class="client-logo">
+        <img src="{% static 'images/clients/image010.png' %}" alt="Client 10" class="client-logo">
+        <img src="{% static 'images/clients/image011.png' %}" alt="Client 11" class="client-logo">
+        <img src="{% static 'images/clients/image012.png' %}" alt="Client 12" class="client-logo">
+        <img src="{% static 'images/clients/image013.png' %}" alt="Client 13" class="client-logo">
+        <img src="{% static 'images/clients/image014.jpg' %}" alt="Client 14" class="client-logo">
+        <img src="{% static 'images/clients/image015.png' %}" alt="Client 15" class="client-logo">
+        <img src="{% static 'images/clients/image016.png' %}" alt="Client 16" class="client-logo">
+        <img src="{% static 'images/clients/image017.png' %}" alt="Client 17" class="client-logo">
+        <img src="{% static 'images/clients/image018.png' %}" alt="Client 18" class="client-logo">
+        <img src="{% static 'images/clients/image019.png' %}" alt="Client 19" class="client-logo">
+        <img src="{% static 'images/clients/image020.png' %}" alt="Client 20" class="client-logo">
+        <img src="{% static 'images/clients/image021.jpg' %}" alt="Client 21" class="client-logo">
+        <img src="{% static 'images/clients/image022.png' %}" alt="Client 22" class="client-logo">
+        <img src="{% static 'images/clients/image023.png' %}" alt="Client 23" class="client-logo">
+        <img src="{% static 'images/clients/image024.png' %}" alt="Client 24" class="client-logo">
+        <img src="{% static 'images/clients/image025.png' %}" alt="Client 25" class="client-logo">
+        <img src="{% static 'images/clients/image026.png' %}" alt="Client 26" class="client-logo">
+        <img src="{% static 'images/clients/image027.png' %}" alt="Client 27" class="client-logo">
+        <img src="{% static 'images/clients/image028.png' %}" alt="Client 28" class="client-logo">
+        <img src="{% static 'images/clients/image029.png' %}" alt="Client 29" class="client-logo">
+        <img src="{% static 'images/clients/image030.jpg' %}" alt="Client 30" class="client-logo">
+        <img src="{% static 'images/clients/image031.png' %}" alt="Client 31" class="client-logo">
+        <img src="{% static 'images/clients/image032.png' %}" alt="Client 32" class="client-logo">
+        <img src="{% static 'images/clients/image033.png' %}" alt="Client 33" class="client-logo">
+        <img src="{% static 'images/clients/image034.jpg' %}" alt="Client 34" class="client-logo">
+        <img src="{% static 'images/clients/image035.png' %}" alt="Client 35" class="client-logo">
+        <img src="{% static 'images/clients/image036.png' %}" alt="Client 36" class="client-logo">
+        <img src="{% static 'images/clients/image037.png' %}" alt="Client 37" class="client-logo">
+        <img src="{% static 'images/clients/image038.png' %}" alt="Client 38" class="client-logo">
+        <img src="{% static 'images/clients/image039.png' %}" alt="Client 39" class="client-logo">
+        <img src="{% static 'images/clients/image040.png' %}" alt="Client 40" class="client-logo">
+        <img src="{% static 'images/clients/image041.png' %}" alt="Client 41" class="client-logo">
+        <img src="{% static 'images/clients/image042.png' %}" alt="Client 42" class="client-logo">
+        <img src="{% static 'images/clients/image043.jpg' %}" alt="Client 43" class="client-logo">
+        <img src="{% static 'images/clients/image044.jpg' %}" alt="Client 44" class="client-logo">
+        <img src="{% static 'images/clients/image045.png' %}" alt="Client 45" class="client-logo">
+        <img src="{% static 'images/clients/image046.jpg' %}" alt="Client 46" class="client-logo">
+        <img src="{% static 'images/clients/image047.png' %}" alt="Client 47" class="client-logo">
+        <img src="{% static 'images/clients/image048.png' %}" alt="Client 48" class="client-logo">
+        <img src="{% static 'images/clients/image049.png' %}" alt="Client 49" class="client-logo">
+        <img src="{% static 'images/clients/image050.png' %}" alt="Client 50" class="client-logo">
+        <img src="{% static 'images/clients/image051.jpg' %}" alt="Client 51" class="client-logo">
+        <img src="{% static 'images/clients/image052.jpg' %}" alt="Client 52" class="client-logo">
+        <img src="{% static 'images/clients/image053.png' %}" alt="Client 53" class="client-logo">
+        <img src="{% static 'images/clients/image055.png' %}" alt="Client 54" class="client-logo">
+        <img src="{% static 'images/clients/image056.png' %}" alt="Client 55" class="client-logo">
+        <img src="{% static 'images/clients/image057.png' %}" alt="Client 56" class="client-logo">
+        <img src="{% static 'images/clients/image058.png' %}" alt="Client 57" class="client-logo">
+        <img src="{% static 'images/clients/image059.jpg' %}" alt="Client 58" class="client-logo">
+        <img src="{% static 'images/clients/image060.png' %}" alt="Client 59" class="client-logo">
+        <img src="{% static 'images/clients/image061.png' %}" alt="Client 60" class="client-logo">
+        <img src="{% static 'images/clients/image062.png' %}" alt="Client 61" class="client-logo">
+        <img src="{% static 'images/clients/image063.png' %}" alt="Client 62" class="client-logo">
+        <img src="{% static 'images/clients/image064.png' %}" alt="Client 63" class="client-logo">
+        <img src="{% static 'images/clients/image065.jpg' %}" alt="Client 64" class="client-logo">
+        <img src="{% static 'images/clients/image066.png' %}" alt="Client 65" class="client-logo">
+        <img src="{% static 'images/clients/image067.png' %}" alt="Client 66" class="client-logo">
+        <img src="{% static 'images/clients/image068.png' %}" alt="Client 67" class="client-logo">
+        <img src="{% static 'images/clients/image069.png' %}" alt="Client 68" class="client-logo">
+        <img src="{% static 'images/clients/image070.png' %}" alt="Client 69" class="client-logo">
+        <img src="{% static 'images/clients/image071.png' %}" alt="Client 70" class="client-logo">
+        <img src="{% static 'images/clients/image072.jpg' %}" alt="Client 71" class="client-logo">
+        <img src="{% static 'images/clients/image073.jpg' %}" alt="Client 72" class="client-logo">
+        <img src="{% static 'images/clients/image074.png' %}" alt="Client 73" class="client-logo">
+        <img src="{% static 'images/clients/image075.png' %}" alt="Client 74" class="client-logo">
+        <img src="{% static 'images/clients/image076.jpg' %}" alt="Client 75" class="client-logo">
+        <img src="{% static 'images/clients/image077.png' %}" alt="Client 76" class="client-logo">
+        <img src="{% static 'images/clients/image078.png' %}" alt="Client 77" class="client-logo">
+        <img src="{% static 'images/clients/image079.jpg' %}" alt="Client 78" class="client-logo">
+        <img src="{% static 'images/clients/image080.png' %}" alt="Client 79" class="client-logo">
+        <img src="{% static 'images/clients/image081.png' %}" alt="Client 80" class="client-logo">
+        <img src="{% static 'images/clients/image082.png' %}" alt="Client 81" class="client-logo">
+        <img src="{% static 'images/clients/image083.png' %}" alt="Client 82" class="client-logo">
+        <img src="{% static 'images/clients/image084.png' %}" alt="Client 83" class="client-logo">
+        <img src="{% static 'images/clients/image085.png' %}" alt="Client 84" class="client-logo">
+        <img src="{% static 'images/clients/image086.jpg' %}" alt="Client 85" class="client-logo">
+        <img src="{% static 'images/clients/image087.png' %}" alt="Client 86" class="client-logo">
+        <img src="{% static 'images/clients/image088.png' %}" alt="Client 87" class="client-logo">
+        <img src="{% static 'images/clients/image089.png' %}" alt="Client 88" class="client-logo">
+        <img src="{% static 'images/clients/image090.png' %}" alt="Client 89" class="client-logo">
+        <img src="{% static 'images/clients/image091.jpg' %}" alt="Client 90" class="client-logo">
+        <img src="{% static 'images/clients/image092.png' %}" alt="Client 91" class="client-logo">
+        <img src="{% static 'images/clients/image093.png' %}" alt="Client 92" class="client-logo">
+        <img src="{% static 'images/clients/image094.jpg' %}" alt="Client 93" class="client-logo">
+        <img src="{% static 'images/clients/image095.jpg' %}" alt="Client 94" class="client-logo">
+        <img src="{% static 'images/clients/image096.png' %}" alt="Client 95" class="client-logo">
+        <img src="{% static 'images/clients/image097.png' %}" alt="Client 96" class="client-logo">
+        <img src="{% static 'images/clients/image098.jpg' %}" alt="Client 97" class="client-logo">
+        <img src="{% static 'images/clients/image099.png' %}" alt="Client 98" class="client-logo">
+        <img src="{% static 'images/clients/image100.jpg' %}" alt="Client 99" class="client-logo">
+        <img src="{% static 'images/clients/image101.png' %}" alt="Client 100" class="client-logo">
+        <img src="{% static 'images/clients/image102.png' %}" alt="Client 101" class="client-logo">
+        <img src="{% static 'images/clients/image103.jpg' %}" alt="Client 102" class="client-logo">
+        <img src="{% static 'images/clients/image104.png' %}" alt="Client 103" class="client-logo">
+        <img src="{% static 'images/clients/image105.png' %}" alt="Client 104" class="client-logo">
+        <img src="{% static 'images/clients/image106.png' %}" alt="Client 105" class="client-logo">
+        <img src="{% static 'images/clients/image107.png' %}" alt="Client 106" class="client-logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Why Choose TIS Section -->
+
+<section class="section iso-steps-section">
+    <div class="sec-container container text-center">
+        <h2 style="color: #0F2385;font-weight: bolder;">Why Choose TIS?</h2>
+        <p style="color: #0F2385;font-weight: bold;" class="section-para">Discover the Advantages of Partnering with us for your Certification Needs:</p>
+
+        <div class="iso-steps-wrapper">
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">01</div>
+                <div class="iso-step-icon"><i class="fas fa-award"></i></div>
+                <h3 class="iso-step-title">Trusted Certification</h3>
+                <p class="iso-step-text">Recognized by businesses and organizations worldwide.</p>
+            </div>
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">02</div>
+                <div class="iso-step-icon"><i class="fas fa-user-tie"></i></div>
+                <h3 class="iso-step-title">Experienced Auditors</h3>
+                <p class="iso-step-text">Our experts ensure compliance with global ISO standards.</p>
+            </div>
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">03</div>
+                <div class="iso-step-icon"><i class="fas fa-bolt"></i></div>
+                <h3 class="iso-step-title">Fast & Transparent</h3>
+                <p class="iso-step-text">We simplify certification through clear and quick processes.</p>
+            </div>
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">04</div>
+                <div class="iso-step-icon"><i class="fas fa-headset"></i></div>
+                <h3 class="iso-step-title">24/7 Support</h3>
+                <p class="iso-step-text">Get guidance anytime from our friendly support team.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Featured Gallery Section -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+
+    <h2 style="color: #0F2385;font-weight: bolder;">Moments With Our Clients</h2>
+
+
+    <div class="row g-3 justify-content-center">
+      {% for image in home_gallery_images %}
+      <div class="col-6 col-md-3">
+        <div class="gallery-item-mini"
+            data-bs-toggle="modal"
+            data-bs-target="#homeGalleryModal"
+            data-bs-image="{% static 'images/gallery/' %}{{ image }}">
+          <img src="{% static 'images/gallery/' %}{{ image }}" class="img-fluid"
+               alt="Happy Clients {{ forloop.counter }}">
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="mt-4">
+      <a href="{% url 'gallery' %}"
+         class="btn btn-primary px-4 fw-semibold">
+        View Full Gallery
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Preview (reusing existing gallery design) -->
+<div class="modal fade" id="homeGalleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark border-0">
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+              data-bs-dismiss="modal" aria-label="Close"></button>
+      <img id="homeGalleryModalImage" src="" class="img-fluid w-100 rounded">
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.gallery-item-mini').forEach(item => {
+    item.addEventListener('click', () => {
+      document.getElementById('homeGalleryModalImage').src =
+          item.getAttribute('data-bs-image');
+    });
+  });
+</script>
+
+
+
+
+
+{% endblock %}

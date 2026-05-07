@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Photo Gallery - TIS Certification{% endblock %}
+
+{% block content %}
+
+
+
+<!-- Gallery Grid -->
+<section class="py-5 gallery-section">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="text-primary fw-bold gallery-title">Happy Clients</h2>
+      <p class="text-muted mb-0">
+        A quick look at some of our certification handovers and client interactions.
+      </p>
+    </div>
+
+    <div class="row g-4">
+  {% for image in images %}
+  <div class="col-6 col-md-4 col-lg-3">
+    <div class="gallery-item"
+         data-bs-toggle="modal"
+         data-bs-target="#galleryModal"
+         data-bs-image="{% static 'images/gallery/' %}{{ image }}">
+      <img src="{% static 'images/gallery/' %}{{ image }}" alt="{{ image }}">
+      <div class="gallery-overlay"><span>View Image</span></div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal for full image view -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0">
+        <img id="galleryModalImage" src="" alt="Gallery Image" class="img-fluid w-100">
+      </div>
+      <button type="button"
+              class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <button type="button" class="btn-close btn-close-white ms-auto me-2 mt-2"
+              data-bs-dismiss="modal" aria-label="Close"></button>
+      <img id="modalImg" src="" class="w-100 rounded-4 shadow">
+    </div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const imgPath = item.getAttribute('data-bs-image');
+    document.getElementById('modalImg').src = imgPath;
+  });
+});
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const galleryItems = document.querySelectorAll(".gallery-item");
+    const modalImg = document.getElementById("galleryModalImage");
+
+    galleryItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const imgSrc = item.getAttribute("data-bs-image");
+        modalImg.src = imgSrc;
+      });
+    });
+  });
+</script>
+
+{% endblock %}

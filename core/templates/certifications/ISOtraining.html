@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ISO41001 - TIS Certification{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/foodsafety.css' %}">
+<link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/static/css/IsoTraining.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+{% endblock %}
+
+
+{% block content %}
+
+
+        <div class="canvas">
+
+    <div class="heading">
+        <div class="heading-content container">
+
+            <h1>ISO Training</h1>
+            <div class="bread">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="text-white">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" style="color: white;">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color: white;">ISO Training</li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+<div class="content">
+    <div class="section">
+        <div class="sec-container container">
+        <div class="section-heading">
+            <h2>About </h2>
+        </div>
+        <div class="section-para">
+            <p>ISO training is a structured professional development program designed to help organizations align with international standards for quality, safety, and efficiency. It equips employees with the essential knowledge and skills to establish and maintain processes that comply with ISO requirements. As a result, businesses can ensure their products and services remain consistent, safe, and high in quality.</p>
+            <p>Moreover, ISO training supports improved customer satisfaction and regulatory compliance by strengthening organizational processes. It plays a vital role in an organization’s growth strategy, enabling continuous improvement, enhanced operational performance, and adherence to both environmental and industry-specific standards. Automating and routinely managing ISO training further ensures sustained compliance and long-term success.</p>
+        </div>
+    </div>
+    </div>
+   
+   <!-- Who Should Attend Section -->
+
+<section class="section iso-steps-section">
+    <div class="sec-container container text-center">
+        <h2 class="fw-bold">Advantages of ISO Training</h2>
+        <p class="section-para">Key benefits organizations gain through ISO Training:</p>
+
+        <div class="iso-steps-wrapper">
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">01</div>
+                <div class="iso-step-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="iso-step-title">Ensures Quality & Safety</h3>
+                <p class="iso-step-text">Helps businesses adhere to the highest international standards, ensuring safer and more reliable products and services.</p>
+            </div>
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">02</div>
+                <div class="iso-step-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3 class="iso-step-title">Enhances Workforce Skills</h3>
+                <p class="iso-step-text">Employees learn the latest industry practices and regulatory requirements to integrate into daily processes.</p>
+            </div>
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">03</div>
+                <div class="iso-step-icon"><i class="fas fa-chart-line"></i></div>
+                <h3 class="iso-step-title">Improves Business Competitiveness</h3>
+                <p class="iso-step-text">Certified organizations demonstrate strong commitment to quality, enhancing trust and market position.</p>
+            </div>
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">04</div>
+                <div class="iso-step-icon"><i class="fas fa-money-bill-wave"></i></div>
+                <h3 class="iso-step-title">Reduces Operational Errors</h3>
+                <p class="iso-step-text">Minimizes costly mistakes by improving knowledge of industry standards and proper process execution.</p>
+            </div>
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">05</div>
+                <div class="iso-step-icon"><i class="fas fa-tools"></i></div>
+                <h3 class="iso-step-title">Stronger CAPA System</h3>
+                <p class="iso-step-text">Improves ability to develop corrective and preventive actions for ongoing process effectiveness.</p>
+            </div>
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">06</div>
+                <div class="iso-step-icon"><i class="fas fa-search"></i></div>
+                <h3 class="iso-step-title">Detects & Resolves Non-conformities</h3>
+                <p class="iso-step-text">Enhances evaluation methods to identify, manage, and eliminate deviations efficiently.</p>
+            </div>
+
+        </div>
+
+        <div class="mt-4">
+            <p class="section-para">
+                TIS Certifications provides online ISO training with practical auditing skills for ISO 9001 (QMS), ISO 14001 (EMS), and ISO 45001 (OHSMS). Lead Auditor Training is offered for all three standards, helping organizations maintain compliance and boost customer satisfaction.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- /Who Should Attend Section -->
+
+
+
+
+
+
+
+        
+   
+
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Toggle active class on button
+                    this.classList.toggle('active');
+                    
+                    // Toggle active class on parent accordion item
+                    const accordionItem = this.closest('.accordion-item');
+                    accordionItem.classList.toggle('active');
+                    
+                    // Close other accordion items if needed (optional)
+                    // accordionButtons.forEach(otherButton => {
+                    //     if (otherButton !== this) {
+                    //         otherButton.classList.remove('active');
+                    //         otherButton.closest('.accordion-item').classList.remove('active');
+                    //     }
+                    // });
+                });
+            });
+        });
+    </script>
+        
+    </body>
+</html>
+
+
+{%endblock %}

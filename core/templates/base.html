@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  {% load static %}
+  <!-- SEO: Meta tags, Open Graph, Twitter Card, Canonical, Schema -->
+  <title>{% block title %}TIS Certifications | ISO Certification & Training{% endblock %}</title>
+  <meta name="description" content="{% block description %}TIS Certifications provides ISO certification, training, and consultancy services globally.{% endblock %}">
+  <meta name="keywords" content="ISO certification, ISO 9001, ISO 14001, ISO 45001, ISO training, TIS Certifications">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="uuvzSuHR8XVI9uIvNjVP6ZBQDdM0ZKHSZo45-IKZd3g" />
+  <link rel="canonical" href="https://tiscertificate.pythonanywhere.com{{ request.path }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% block og_title %}TIS Certifications | ISO Certification & Training{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}TIS Certifications provides ISO certification, training, and consultancy services globally.{% endblock %}">
+  <meta property="og:image" content="{% static 'images/logo.png' %}">
+  <meta property="og:url" content="https://tiscertificate.pythonanywhere.com{{ request.path }}">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% block twitter_title %}TIS Certifications | ISO Certification & Training{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_description %}TIS Certifications provides ISO certification, training, and consultancy services globally.{% endblock %}">
+  <meta name="twitter:image" content="{% static 'images/logo.png' %}">
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TIS Certifications",
+    "url": "https://tiscertificate.pythonanywhere.com/",
+    "logo": "https://tiscertificate.pythonanywhere.com/static/images/logo.png",
+    "description": "TIS Certifications provides ISO certification, training, and consultancy services globally."
+  }
+  </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+
+    {% endblock %}
+</head>
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static 'images/logo.png' %}" alt="TIS Certification Logo" class="navbar-logo">
+    </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}"><b>Home</b></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"><b>About</b></a></li>
+
+
+<!-- Mega Dropdown for Certifications -->
+<li class="nav-item dropdown mega-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="certDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <b>Certifications</b>
+  </a>
+
+  <div class="dropdown-menu mega-menu p-4" aria-labelledby="certDropdown">
+    <div class="container-fluid">
+      <div class="row g-4 justify-content-between">
+
+        <!-- Management System Certifications -->
+        <div class="col-lg col-md-6">
+          <h6 class="fw-bold text-uppercase mb-3 text-start">Management System Certifications</h6>
+          <ul class="list-unstyled">
+            <li><a href="{% url 'iso_9001' %}">ISO 9001 Certification</a></li>
+            <li><a href="{% url 'iso_14001' %}">ISO 14001 Certification</a></li>
+            <li><a href="{% url 'iso_45001' %}">ISO 45001 Certification</a></li>
+            <li><a href="{% url 'iso_22000' %}">ISO 22000 Certification</a></li>
+            <li><a href="{% url 'iso_iec_27001' %}">ISO/IEC 27001 Certification</a></li>
+            <li><a href="{% url 'iso_20000_1' %}">ISO/IEC 20000-1 Certification</a></li>
+            <li><a href="{% url 'iso_42001' %}">ISO/IEC 42001 Certification for AI</a></li>
+            <li><a href="{% url 'iso_22301' %}">ISO 22301 Certification</a></li>
+            <li><a href="{% url 'iso_41001' %}">ISO 41001 Certification</a></li>
+            <li><a href="{% url 'iso_50001' %}">ISO 50001 Certification</a></li>
+          <!-- <li><a href="{% url 'iso_13485' %}">ISO 13485 Certification</a></li>-->
+            <!--<li><a href="{% url 'iso_27701' %}">ISO/IEC 27701 Certification</a></li>-->
+            <!--<li><a href="{% url 'iso_21001' %}">ISO 21001 Certification</a></li>-->
+             <!-- <li><a href="{% url 'iso_37001' %}">ISO 37001 Certification</a></li>-->
+
+          </ul>
+        </div>
+
+        <!-- Types of Audits -->
+        <div class="col-lg col-md-6">
+          <h6 class="fw-bold text-uppercase mb-3 text-start">Types of Audits</h6>
+          <ul class="list-unstyled">
+            <li><a href="{% url 'safetyaudit' %}">Safety Audits</a></li>
+            <li><a href="{% url 'energyaudit' %}">Energy Audit</a></li>
+
+          </ul>
+        </div>
+
+        <!-- Product Certifications
+        <div class="col-lg col-md-6">
+          <h6 class="fw-bold text-uppercase mb-3 text-start">Product Certification</h6>
+          <ul class="list-unstyled">
+            <li><a href="{% url 'ISO8124' %}">ISO 8124 Certifications</a></li>
+            <li><a href="{% url 'CE' %}">CE Mark</a></li>
+          </ul>
+        </div>
+              -->
+        <!-- Food Safety -->
+        <div class="col-lg col-md-6">
+          <h6 class="fw-bold text-uppercase mb-3 text-start">Food Safety Certification</h6>
+          <ul class="list-unstyled">
+            <li><a href="{% url 'HACCP' %}">HACCP (Hazard Analysis Critical Control Point)</a></li>
+            <li><a href="{% url 'FoodSafetycertification' %}">Food Safety Certifications</a></li>
+          </ul>
+        </div>
+
+        <!-- Trainings -->
+        <div class="col-lg col-md-6">
+          <h6 class="fw-bold text-uppercase mb-3 text-start">Trainings</h6>
+          <ul class="list-unstyled">
+            <li><a href="{% url 'ISOawarenesstraining' %}">ISO Awareness Training</a></li>
+            <li><a href="{% url 'LeadAuditorTraining' %}">Lead Auditor Training</a></li>
+            <li><a href="{% url 'InternalAuditorTraining'%}">Internal Auditor Training</a></li>
+            <li><a href="{% url 'ISOtraining'%}">ISO Training</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+<!--industries-->
+<li class="nav-item dropdown industries-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <b>Industries</b>
+  </a>
+
+  <div class="dropdown-menu industries-menu p-4" aria-labelledby="industriesDropdown">
+    <div class="container-fluid">
+      <div class="row g-4 justify-content-between">
+
+        <div class="col-lg col-md-6">
+
+          <ul class="list-unstyled">
+
+            <li><a href="{% url 'AutomotiveIndustry' %}">Automotive Industry</a></li>
+            <li><a href="{% url 'BankingAndFinance' %}">Banking and Finance</a></li>
+            <li><a href="{% url 'ChemicalIndustry' %}">Chemical Industry</a></li>
+            <li><a href="{% url 'ConstructionIndustry' %}">Construction Industry</a></li>
+            <li><a href="{% url 'DefenceIndustry' %}">Defence Industry</a></li>
+            <li><a href="{% url 'EducationIndustry' %}">Education Industry</a></li>
+            <li><a href="{% url 'ElectricalsAndElectronicsIndustry' %}">Electricals and Electronics Industry</a></li>
+            <li><a href="{% url 'EnergyIndustry' %}">Energy Industry</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg col-md-6">
+          <ul class="list-unstyled">
+
+
+            <li><a href="{% url 'FoodandFoodProducts' %}">Food and Food Products</a></li>
+            <li><a href="{% url 'HospitalityIndustry' %}">Hospitality Industry</a></li>
+
+            <li><a href="{% url 'ImportAndExportIndustry' %}">Import and Export Industry</a></li>
+            <li><a href="{% url 'InformationTechnologyIndustry' %}">Information Technology Industry</a></li>
+            <li><a href="{% url 'ManufacturingIndustries' %}">Manufacturing Industries</a></li>
+            <li><a href="{% url 'MedicalDevices' %}">Medical Devices</a></li>
+
+            <li><a href="{% url 'OilAndGasIndustry' %}">Oil and Gas Industry</a></li>
+            <li><a href="{% url 'PharmaceuticalIndustry' %}">Pharmaceutical Industry</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg col-md-6">
+          <ul class="list-unstyled">
+
+            <li><a href="{% url 'PublicSector' %}">Public Sector</a></li>
+
+            <li><a href="{% url 'Railways' %}">Railways</a></li>
+            <li><a href="{% url 'SolarIndustry' %}">Solar Industry</a></li>
+            <li><a href="{% url 'TelecommunicationIndustry' %}">Telecommunication Industry</a></li>
+            <li><a href="{% url 'TextileIndustry' %}">Textile Industry</a></li>
+
+            <li><a href="{% url 'TourismIndustries' %}">Tourism Industries</a></li>
+            <li><a href="{% url 'TransportandLogistics' %}">Transport and Logistics</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+
+
+                    <li class="nav-item"><a class="nav-link" href="{% url 'accreditation' %}"><b>Accreditation</b></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><b>Contact</b></a></li>
+                    <li class="nav-item ms-lg-3">
+                      <button class="btn btn-outline-light btn-sm verify-btn-nav"
+                              type="button"
+                              data-bs-toggle="modal"
+                              data-bs-target="#certificateVerifyModal">
+                        Verify Certificate
+                      </button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offset to prevent navbar overlap -->
+    <div class="navbar-offset"></div>
+
+    <!-- Page Content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+<!-- Application Form Side Panel -->
+<div id="appFormPanel" class="app-form-panel">
+  <button id="appFormClose" class="app-form-close" aria-label="Close">&times;</button>
+
+  <h5 class="mb-2 fw-semibold">Need Certification?</h5>
+  <p class="small mb-3">
+    Download our application form, fill in your details and share it with us to start your certification process.
+  </p>
+
+  <a href="{% static 'docs/TIS_Application_Form.docx' %}"
+     class="btn btn-light btn-sm w-100 fw-semibold text-primary"
+     download>
+    Download Application Form
+  </a>
+</div>
+
+<!-- Slim Tab to reopen panel -->
+<div id="appFormTab" class="app-form-tab">
+
+  <span>Application Form</span>
+</div>
+
+
+    <!-- Footer -->
+   <!-- Footer -->
+<footer class="custom-footer text-white pt-5" style="background-color: var(--primary-blue);">
+  <div class="container">
+    <div class="row text-center text-md-start">
+
+      <!-- Company Info -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">TIS Certification</h5>
+        <p class="small">
+          Your trusted partner in management system certifications and training.
+          We help organizations achieve international quality standards with confidence.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled small">
+          <li><a href="{% url 'home' %}" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="{% url 'about' %}" class="text-white text-decoration-none">About</a></li>
+          <li><a href="{% url 'certifications' %}" class="text-white text-decoration-none">Certifications</a></li>
+          <li><a href="{% url 'accreditation' %}" class="text-white text-decoration-none">Accreditation</a></li>
+          <li><a href="{% url 'contact' %}" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Get in Touch</h5>
+        <ul class="list-unstyled small mb-3">
+          <li><i class="bi bi-geo-alt-fill me-2"></i> TIS Certifications, AL Anoud Complex </li>
+          <li><i class="bi bi-geo-alt-fill me-2" style="color: #0E2134;"></i> Floor 6th, Office 606, Fahaheel, State of Kuwait </li>
+          <li><i class="bi bi-telephone-fill me-2"></i> +965 60456343</li>
+          <li><i class="bi bi-envelope-fill me-2"></i> cm@tiscertification.com</li>
+        </ul>
+        <!-- Social Icons -->
+        <div class="d-flex justify-content-center justify-content-md-start gap-3">
+          <a href="https://www.instagram.com/tis.certification?igsh=dWF0aDFlZTBtcTdi" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-twitter-x fs-5"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="border-light">
+
+    <!-- Bottom Note -->
+    <div class="text-center small">
+      <p class="mb-0">© {{ now.year }} TIS Certification. All rights reserved.</p>
+
+    </div>
+  </div>
+
+  <!-- Chatbot Widget -->
+<div id="chatbot-container">
+  <div id="chatbot-header">
+    <span>TIS Assistant</span>
+    <button id="chatbot-close">&times;</button>
+  </div>
+
+  <div id="chatbot-messages">
+    <div class="bot-message">👋 Hello! I’m here to help with certifications, accreditation, or contacting TIS.</div>
+
+    <div class="quick-options">
+      <button class="quick-btn" data-msg="How to get ISO certification?">ISO Certification</button>
+      <button class="quick-btn" data-msg="How to contact TIS?">Contact Info</button>
+      <button class="quick-btn" data-msg="What is accreditation?">Accreditation</button>
+    </div>
+  </div>
+
+  <div id="chatbot-input">
+    <input type="text" id="user-input" placeholder="Ask me anything...">
+    <button id="send-btn">➤</button>
+  </div>
+</div>
+
+<!-- Floating Chat Icon -->
+<button id="chatbot-toggle" title="Chat with us">💬</button>
+
+
+<!-- JS File -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn   = document.getElementById("chatbot-toggle");
+  const chatBox     = document.getElementById("chatbot-container");
+  const closeBtn    = document.getElementById("chatbot-close");
+  const sendBtn     = document.getElementById("send-btn");
+  const input       = document.getElementById("user-input");
+  const messagesBox = document.getElementById("chatbot-messages");
+
+  if (!toggleBtn || !chatBox || !closeBtn || !sendBtn || !input || !messagesBox) {
+    return;
+  }
+
+  // --- UI open/close ---
+  toggleBtn.addEventListener("click", () => {
+    chatBox.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    chatBox.style.display = "none";
+  });
+
+  // --- Sending message ---
+  function appendMessage(text, type = "user", isHTML = false) {
+    const div = document.createElement("div");
+    div.classList.add(type === "user" ? "user-message" : "bot-message");
+    if (isHTML) {
+      div.innerHTML = text;
+    } else {
+      div.textContent = text;
+    }
+    messagesBox.appendChild(div);
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+  }
+
+  function handleSend() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    appendMessage(text, "user");
+    input.value = "";
+
+    setTimeout(() => {
+      const reply = generateReply(text);
+      appendMessage(reply.text, "bot", reply.isHTML);
+    }, 600);
+  }
+
+  sendBtn.addEventListener("click", handleSend);
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") handleSend();
+  });
+
+  // --- Quick buttons ---
+  const quickButtons = document.querySelectorAll(".quick-btn");
+  quickButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const msg = btn.dataset.msg || btn.innerText;
+      appendMessage(msg, "user");
+      setTimeout(() => {
+        const reply = generateReply(msg);
+        appendMessage(reply.text, "bot", reply.isHTML);
+      }, 500);
+    });
+  });
+
+  // --- Reply Logic ---
+  function generateReply(userText) {
+    const text = userText.toLowerCase();
+
+    // Greetings
+    if (includesAny(text, ["hi", "hello", "hey"])) {
+      return {
+        text: "Hello! 👋 I can help you with ISO certifications, accreditation, industries we serve, or how to contact TIS.",
+        isHTML: false
+      };
+    }
+
+    // ISO / Certifications
+    if (includesAny(text, ["iso", "certification", "certifications"])) {
+      return {
+        text: `
+          We offer a wide range of ISO certifications like ISO 9001, 14001, 45001, 22000, 27001, 22301 and more.<br><br>
+          👉 You can explore them here: <a href="/certifications/" target="_blank">Certifications Page</a>.
+        `,
+        isHTML: true
+      };
+    }
+
+    // Specific popular ISO standards
+    if (includesAny(text, ["9001", "14001", "45001", "27001", "22000"])) {
+      return {
+        text: `
+          This standard is part of our core certification services ✅<br>
+          For details on requirements and process, please check our <a href="/certifications/" target="_blank">Certifications Page</a>
+          or contact us using the Contact page.
+        `,
+        isHTML: true
+      };
+    }
+
+    // Accreditation
+    if (includesAny(text, ["accreditation", "accredited", "asib"])) {
+      return {
+        text: `
+          TIS Certification operates under recognized accreditation frameworks (like ASIB) to ensure global credibility and impartiality. ✅<br><br>
+          ℹ You can read more here: <a href="/accreditation/" target="_blank">Accreditation Page</a>.
+        `,
+        isHTML: true
+      };
+    }
+
+    // Industries
+    if (includesAny(text, ["industry", "industries", "sector", "sectors"])) {
+      return {
+        text: `
+          We serve a wide range of industries including defence, food, IT, telecom, construction, automotive, pharma and more. 🏭<br><br>
+          👉 Visit: <a href="/industries/" target="_blank">Industries Page</a> (if you have this route), or check Certifications for sector mapping.
+        `,
+        isHTML: true
+      };
+    }
+
+    // Contact info
+   if (includesAny(text, ["contact", "phone", "email", "call", "reach"])) {
+      return {
+        text: `
+          You can reach TIS Certification using the details below:<br><br>
+          📧 <strong>Email:</strong> cm@tiscertification.com<br>
+          📞 <strong>Phone:</strong> +96560456343<br><br>
+          Or use the contact form here:<br>
+          <a href="/contact/" target="_blank">Contact Page</a>.
+        `,
+        isHTML: true
+      };
+    }
+
+    // Gallery / Photos
+    if (includesAny(text, ["gallery", "photos", "pictures", "events"])) {
+      return {
+        text: `
+          You can view some of our happy clients, trainings and events in our photo gallery 📸<br><br>
+          👉 <a href="/gallery/" target="_blank">Open Gallery</a>
+        `,
+        isHTML: true
+      };
+    }
+
+    // Certificate Verification
+    if (includesAny(text, ["verify", "verification", "certificate number", "serial"])) {
+      return {
+        text: `
+          To verify a certificate, please use the <strong>Verify Certificate</strong> button in the top navigation bar. 🔐<br><br>
+          It will open a form where you can enter your certificate serial number.
+        `,
+        isHTML: true
+      };
+    }
+
+    // Application form / download
+    if (includesAny(text, ["application form","form","application", "apply", "download form", "docx"])) {
+      return {
+        text: `
+          You can download our latest application form from the side panel on the right of the screen 📄<br>
+          Look for the <a href="{% static 'docs/TIS_Application_Form.docx' %}"
+     class="btn btn-light btn-sm w-100 fw-semibold text-primary"
+     download>
+    Download Application Form
+  </a> tab – click to open and download the .DOCX file.
+        `,
+        isHTML: true
+      };
+    }
+
+    // Help
+    if (includesAny(text, ["help", "support", "assist"])) {
+      return {
+        text: `
+          I can help you with:<br>
+          • ISO certification information<br>
+          • Accreditation details<br>
+          • Industries we serve<br>
+          • How to contact TIS<br>
+          • Where to find gallery and forms<br><br>
+          Try asking, for example: <em>"How do I get ISO 9001 certified?"</em>.
+        `,
+        isHTML: true
+      };
+    }
+
+    // Fallback
+    return {
+      text: `
+        I’m not fully trained on that question yet 😅<br><br>
+        You can try asking about:<br>
+        • ISO certifications<br>
+        • Accreditation<br>
+        • Certificate verification<br>
+        • Contact details<br>
+        • Gallery / photos<br><br>
+        Or visit our <a href="/contact/" target="_blank">Contact Page</a> and our team will assist you directly.
+      `,
+      isHTML: true
+    };
+  }
+
+  function includesAny(text, keywords) {
+    return keywords.some(word => text.includes(word));
+  }
+});
+</script>
+
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</footer>
+
+<!-- Certificate Verification Modal -->
+<div class="modal fade" id="certificateVerifyModal" tabindex="-1"
+     aria-labelledby="certificateVerifyLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content verify-modal">
+
+      <div class="modal-header border-0 verify-modal-header">
+        <h5 class="modal-title fw-semibold" id="certificateVerifyLabel">
+          Certificate Verification
+        </h5>
+        <button type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <p class="small text-muted mb-3">
+          Enter your certificate serial number below to verify its authenticity.
+        </p>
+
+        <!-- 🔗 CONNECTED TO DJANGO -->
+        <form method="post" action="{% url 'verify_certificate' %}">
+          {% csrf_token %}
+
+          <div class="mb-3">
+            <label for="certificateSerial" class="form-label">
+              Certificate Serial Number
+            </label>
+            <input type="text"
+                   class="form-control"
+                   id="certificateSerial"
+                   name="certificateSerial"
+                   placeholder="e.g. TIS-123456789"
+                   required>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button type="button"
+                    class="btn btn-secondary me-2"
+                    data-bs-dismiss="modal">
+              Cancel
+            </button>
+            <button type="submit"
+                    class="btn btn-primary verify-submit-btn">
+              Verify
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const panel = document.getElementById('appFormPanel');
+    const tab = document.getElementById('appFormTab');
+    const closeBtn = document.getElementById('appFormClose');
+
+    if (!panel || !tab || !closeBtn) return;
+
+    // Apply saved state
+    const isCollapsed = localStorage.getItem('appFormCollapsed') === 'true';
+    if (isCollapsed) {
+      panel.classList.add('collapsed');
+    }
+
+    // Close panel + save preference
+    closeBtn.addEventListener('click', function () {
+      panel.classList.add('collapsed');
+      localStorage.setItem('appFormCollapsed', 'true');
+    });
+
+    // Reopen panel + update preference
+    tab.addEventListener('click', function () {
+      panel.classList.remove('collapsed');
+      localStorage.setItem('appFormCollapsed', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ISO 8124 Certification - TIS Certification{% endblock %}
+
+{% block extra_css %}
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/static/css/ISO8124.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+{% endblock  %}
+{% block content %}
+
+        <div class="canvas">
+
+    <div class="heading">
+        <div class="heading-content container">
+
+            <h1>ISO 8124</h1>
+            <div class="bread">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="text-white">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" style="color: white;">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color: white;">ISO 8124 Certification</li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+<div class="content">
+    <div class="section">
+        <div class="sec-container container">
+            <div class="section-heading">
+            <h2>About ISO 8124</h2>
+        </div>
+        <div class="section-para">
+            
+            <p>ISO 8124:2018 applies to all toys designed or clearly intended for use in play by children under the age of 14. The standard covers toys in the condition in which they are supplied to the consumer and also applies to toys subjected to reasonably foreseeable conditions of normal use and misuse, unless otherwise specified.</p>
+            <p>Globally, the ISO 8124 Certification is recognized as a key international standard developed by the ISO Technical Committee on the Safety of Toys (ISO/TC 181). It serves as a benchmark for ensuring toy safety and provides manufacturers, importers, and regulatory bodies with reliable assurance of compliance with international safety requirements.</p>
+            
+        </div>
+        </div>
+        
+    </div>
+
+
+    <div class="section">
+        <div class="sec-container container">
+             <div class="section-heading">
+            <h2>Advantages of ISO 8124</h2>
+            </div>
+            <div class="section-para">
+                <div class="gradiant-box">
+                    
+                    <ul style="margin-bottom: 0px;">
+                        <li>Mechanical and Physical Safety Aspects – Addresses safety requirements related to the mechanical and physical properties of toys to minimize the risk of injury during normal and foreseeable use.</li>
+                        <li>Safety of Activity Toys – Covers the safety specifications for toys such as swings, slides, and similar activity equipment designed for indoor and outdoor household use.</li>
+                        <li>Chemical Composition and Elemental Analysis – Ensures compliance with limits on the total concentration of specific hazardous elements in toys to protect children’s health.</li>
+                        <li>Requirements and Testing Methods for Finger Paints – Specifies safety criteria and test procedures to verify that finger paints are non-toxic and safe for children’s use.</li>
+                        <li>Experimental and Educational Toy Sets – Defines safety requirements and testing methods for science kits and related experimental toys to promote safe educational play.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+
+
+
+<div class="content">
+    <div class="section">
+        <div class="sec-container container">
+            <div class="section-heading">
+            <h2>Applicability:</h2>
+        </div>
+        <div class="section-para">
+            
+            <p>ISO 8124:2018 applies to all toys designed or clearly intended for play by children under the age of 14. According to this international standard, a toy is defined as any product or material specifically created for a child’s play activity.</p>
+            <p>However, the scope of this standard does not extend to certain products such as bicycles, slingshots, and other items not primarily intended for play. Since toys are designed for children across various age groups, the standard also provides specific guidelines and distinctions to address the safety requirements appropriate for each age category.</p>
+            
+        </div>
+        </div>
+        
+    </div>
+
+    
+
+    </div>
+</div>
+
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Toggle active class on button
+                    this.classList.toggle('active');
+                    
+                    // Toggle active class on parent accordion item
+                    const accordionItem = this.closest('.accordion-item');
+                    accordionItem.classList.toggle('active');
+                    
+                    // Close other accordion items if needed (optional)
+                    // accordionButtons.forEach(otherButton => {
+                    //     if (otherButton !== this) {
+                    //         otherButton.classList.remove('active');
+                    //         otherButton.closest('.accordion-item').classList.remove('active');
+                    //     }
+                    // });
+                });
+            });
+        });
+    </script>
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('.question-accordion-button');
+            
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Toggle active class on button and parent accordion item
+                    this.classList.toggle('active');
+                    const accordionItem = this.closest('.question-accordion-item');
+                    accordionItem.classList.toggle('active');
+                    
+                    // Close other accordion items when one is opened (optional)
+                    if (this.classList.contains('active')) {
+                        accordionButtons.forEach(otherButton => {
+                            if (otherButton !== this && otherButton.classList.contains('active')) {
+                                otherButton.classList.remove('active');
+                                otherButton.closest('.question-accordion-item').classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        // Add scroll animation (optional)
+        document.addEventListener('DOMContentLoaded', function() {
+            const steps = document.querySelectorAll('.process-step');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            steps.forEach(step => {
+                observer.observe(step);
+            });
+        });
+    </script>
+    
+        
+    </body>
+</html>
+
+{% endblock  %}
+
+

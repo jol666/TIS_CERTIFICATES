@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ISO41001 - TIS Certification{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/foodsafety.css' %}">
+<link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/static/css/foodsafety.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+{% endblock %}
+
+
+{% block content %}
+
+
+        <div class="canvas">
+
+    <div class="heading">
+        <div class="heading-content container">
+
+            <h1>Food Safety Certifications</h1>
+            <div class="bread">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="text-white">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" style="color: white;">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color: white;">Food Safety Certifications</li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+<div class="content">
+    <div class="section">
+        <div class="sec-container container">
+        <div class="section-heading">
+            <h2>About</h2>
+        </div>
+        <div class="section-para">
+            <p>Food safety certifications are vital in the food industry, ensuring that food is produced, handled, and distributed safely for consumers. Certifications like HACCP (Hazard Analysis and Critical Control Point) and ISO 22000 show an organization’s dedication to preventing contamination, reducing risks, and maintaining consistent product quality.</p>
+            <p>By complying with HACCP and <a href="{% url 'iso_22000'%}" style="font-weight: bold;color: #0F2385;text-decoration: none;">ISO 22000 standards</a> , companies gain a competitive edge, expand their global market opportunities, and strengthen consumer trust. These certifications focus on eliminating foodborne illnesses and protecting the health and well-being of consumers.</p>
+            <p>To achieve food safety certification, organizations must undergo thorough inspections and audits that verify compliance with strict hygiene and safety guidelines. This process assures consumers that food meets high safety standards throughout the supply chain.</p>
+            <p>Overall, food safety certifications lay the foundation for a reliable, responsible, and healthier food industry, helping protect public health while reinforcing business credibility and reputation.</p>
+        </div>
+    </div>
+    </div>
+    
+
+   <div class="section">
+    <div class="sec-container container">
+    <div class="section-heading">
+        <h2>Food Safety Certifications in 30 Days*</h2>
+    </div>
+
+    <!-- gradiant box tiny -->
+    <div class="section-para d-flex gap-3 flex-wrap flex-md-nowrap">
+
+        <div class="gradiant-box-tiny">
+            <p><b>Hygiene & Safety</b></p>
+            <p>Maintain proper hygiene and ensure food safety throughout the entire supply chain.</p>
+        </div>
+
+        <div class="gradiant-box-tiny">
+            <p><b>Standard Compliance</b></p>
+            <p>Meet international food safety regulations and global certification requirements.</p>
+        </div>
+
+        <div class="gradiant-box-tiny">
+            <p><b>Hazard Prevention</b></p>
+            <p>Prevent contamination and reduce the risk of foodborne diseases.</p>
+        </div>
+
+        <div class="gradiant-box-tiny">
+            <p><b>Brand Confidence</b></p>
+            <p>Improve brand reputation and increase customer trust with proven safety controls.</p>
+        </div>
+
+        <div class="gradiant-box-tiny">
+            <p><b>Guaranteed Certification</b></p>
+            <p>100% assurance — we only get paid once your food safety certification is achieved.</p>
+        </div>
+
+    </div>
+    </div>
+    <!-- gradiant box tiny -->
+</div>
+
+
+
+<div class="section">
+    <div class="sec-container container">
+    <div class="section-heading">
+        <h2>Benefits of HACCP Certification</h2>
+    </div>
+    <div class="section-para">
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="card-icon"><i class="fas fa-utensils"></i></div>
+                <h3>Food Safety Assurance</h3>
+                <p>Implements structured food-safety measures to control contamination and health risks.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                <h3>Legal Compliance</h3>
+                <p>Fulfills national and international food-safety and hygiene regulations effectively.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Risk Control</h3>
+                <p>Minimizes chances of foodborne diseases, recalls, and production loss.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-icon"><i class="fas fa-users"></i></div>
+                <h3>Consumer Trust</h3>
+                <p>Boosts confidence among customers by ensuring safe and quality food products.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-icon"><i class="fas fa-coins"></i></div>
+                <h3>Cost Efficiency</h3>
+                <p>Reduces waste, improves supply-chain control, and lowers production errors.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-icon"><i class="fas fa-award"></i></div>
+                <h3>Market Recognition</h3>
+                <p>Strengthens your brand’s image as a trusted, hygienic, and globally compliant food producer.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+<!--steps-->
+
+<section class="section iso-steps-section">
+    <div class="sec-container container text-center">
+        <h2 class="fw-bold">Certification Process</h2>
+        
+
+        <div class="iso-steps-wrapper">
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">01</div>
+                <div class="iso-step-icon"><i class="fas fa-file-contract"></i></div>
+                <h3 class="iso-step-title">Get Compliant</h3>
+                <p class="iso-step-text">Organize your processes, documents & system based on ISO requirements.</p>
+            </div>
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">02</div>
+                <div class="iso-step-icon"><i class="fas fa-user-check"></i></div>
+                <h3 class="iso-step-title">Get Audited</h3>
+                <p class="iso-step-text">An external auditor validates your compliance with ISO standards.</p>
+            </div>
+
+            <div class="iso-step-card">
+                <div class="iso-step-number">03</div>
+                <div class="iso-step-icon"><i class="fas fa-award"></i></div>
+                <h3 class="iso-step-title">Get Certified</h3>
+                <p class="iso-step-text">Receive your ISO Certificate & publicly showcase your achievement.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--steps-->
+
+        
+   
+
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Toggle active class on button
+                    this.classList.toggle('active');
+                    
+                    // Toggle active class on parent accordion item
+                    const accordionItem = this.closest('.accordion-item');
+                    accordionItem.classList.toggle('active');
+                    
+                    // Close other accordion items if needed (optional)
+                    // accordionButtons.forEach(otherButton => {
+                    //     if (otherButton !== this) {
+                    //         otherButton.classList.remove('active');
+                    //         otherButton.closest('.accordion-item').classList.remove('active');
+                    //     }
+                    // });
+                });
+            });
+        });
+    </script>
+        
+    </body>
+</html>
+
+
+{%endblock %}
