@@ -25,6 +25,11 @@ SECRET_KEY = "django-insecure-m75bwy4=)_x5x#lor9jjiqpk2lzt6us$muq8t8gl3&3d914kt7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://tiscertificates-production.up.railway.app",
+]
+
+
 ALLOWED_HOSTS = ['tiscertificates-production.up.railway.app', 'yourdomain.com', 'www.yourdomain.com']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
