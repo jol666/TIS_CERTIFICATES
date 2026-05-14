@@ -27,10 +27,12 @@ DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = [
     "https://tiscertificates-production.up.railway.app",
+    "https://tiscertification.com"
+    "https://www.tiscertification.com
 ]
 
 
-ALLOWED_HOSTS = ['tiscertificates-production.up.railway.app', 'yourdomain.com', 'www.yourdomain.com']
+ALLOWED_HOSTS = ['tiscertificates-production.up.railway.app', 'tiscertification.com', 'https://tiscertification.com']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
