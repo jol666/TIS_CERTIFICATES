@@ -28,7 +28,7 @@ DEBUG = True
 CSRF_TRUSTED_ORIGINS = [
     "https://tiscertificates-production.up.railway.app",
     "https://tiscertification.com"
-    "https://www.tiscertification.com
+    "https://www.tiscertification.com"
 ]
 
 
