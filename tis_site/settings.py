@@ -32,7 +32,13 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 
-ALLOWED_HOSTS = ['tiscertificates-production.up.railway.app', 'tiscertification.com', 'https://tiscertification.com']
+ALLOWED_HOSTS = [
+    "www.tiscertification.com",
+    "tiscertification.com",
+    "tiscertificates-production.up.railway.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
