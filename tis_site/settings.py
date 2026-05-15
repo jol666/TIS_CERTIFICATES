@@ -25,12 +25,11 @@ SECRET_KEY = "django-insecure-m75bwy4=)_x5x#lor9jjiqpk2lzt6us$muq8t8gl3&3d914kt7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://tiscertificates-production.up.railway.app",
-    "https://tiscertification.com"
-    "https://www.tiscertification.com"
-]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://www.tiscertification.com",
+    "https://tiscertification.com",
+]
 
 ALLOWED_HOSTS = [
     "www.tiscertification.com",
