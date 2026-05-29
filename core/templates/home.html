@@ -232,7 +232,9 @@
             data-bs-target="#homeGalleryModal"
             data-bs-image="{% static 'images/gallery/' %}{{ image }}">
           <img src="{% static 'images/gallery/' %}{{ image }}" class="img-fluid"
-               alt="Happy Clients {{ forloop.counter }}">
+               alt="Happy Clients {{ forloop.counter }}"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
       {% endfor %}
