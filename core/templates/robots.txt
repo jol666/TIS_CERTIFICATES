@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://tiscertificate.pythonanywhere.com/sitemap.xml
+Disallow: /admin/
+Disallow: /verify-certificate/
+Sitemap: {{ site_url }}/sitemap.xml

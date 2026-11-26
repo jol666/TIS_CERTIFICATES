@@ -51,9 +51,11 @@
               <h5 class="cert-card-title mb-0" style="color: #0f2385; font-weight: bold;">Management System Certifications</h5>
             </div>
             <p class="cert-card-text small text-muted">
-              Core ISO standards that strengthen the way your organization operates and delivers value.
+              ISO standards that strengthen the way your organization operates and delivers value.
             </p>
             <ul class="list-unstyled cert-links mt-3">
+              <li><a href="{% url 'iso_31000' %}">ISO 31000 – Risk Management Guidelines</a></li>
+              <li><a href="{% url 'iso_46001' %}">ISO 46001 – Water Efficiency Management</a></li>
               <ul><li><a href="{% url 'iso_9001' %}">ISO 9001 – Quality Management Systems</a></li></ul>
              <ul> <li><a href="{% url 'iso_14001' %}">ISO 14001 – Environmental Management Systems</a></li></ul>
               <ul><li><a href="{% url 'iso_45001' %}">ISO 45001 – Occupational Health & Safety</a></li></ul>
@@ -80,7 +82,7 @@
               Protect information assets, privacy, and ensure continuity of IT services.
             </p>
             <ul class="list-unstyled cert-links mt-3">
-              <ul><li><a href="% url 'iso_iec_27001' %}">ISO/IEC 27001 – Information Security Management</a></li></ul>
+              <ul><li><a href="{% url 'iso_iec_27001' %}">ISO/IEC 27001 – Information Security Management</a></li></ul>
           <!--    <ul><li><a href="{% url 'iso_iec_27001' %}">ISO/IEC 27001 (Extended)</a></li></ul>
               <ul><li><a href="{% url 'iso_27701' %}">ISO/IEC 27701 – Privacy Information Management</a></li></ul> -->
               <ul><li><a href="{% url 'iso_20000_1' %}">ISO 20000-1 – IT Service Management</a></li></ul>
@@ -106,6 +108,7 @@
             <ul class="list-unstyled cert-links mt-3">
              <ul> <li><a href="{% url 'iso_22000' %}">ISO 22000 – Food Safety Management</a></li></ul>
              <ul> <li><a href="{% url 'HACCP' %}">HACCP – Hazard Analysis & Critical Control Points</a></li></ul>
+              <li><a href="{% url 'gmp' %}">GMP – Good Manufacturing Practices</a></li>
          <!--    <ul> <li><a href="{% url 'FoodSafetycertification' %}">Food Safety Certification</a></li></ul>
              <ul> <li><a href="{% url 'iso_13485' %}">ISO 13485 – Medical Devices</a></li></ul> -->
             </ul>

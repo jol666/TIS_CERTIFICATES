@@ -1,0 +1,19 @@
+"""Shared public-page search metadata; no request query values enter metadata."""
+from django.conf import settings
+from django.templatetags.static import static
+
+PAGE_LABELS = {'home': 'ISO Certification & Training in Kuwait', 'about': 'About TIS Certification', 'certifications': 'ISO Certifications in Kuwait', 'iso_31000': 'ISO 31000 Risk Management', 'iso_46001': 'ISO 46001 Water Efficiency Certification', 'gmp': 'GMP Good Manufacturing Practices', 'accreditation': 'Accreditation', 'contact': 'Contact TIS Certification', 'gallery': 'Client Photo Gallery', 'iso_41001': 'ISO 41001', 'iso_22301': 'ISO 22301', 'iso_21001': 'ISO 21001', 'iso_45001': 'ISO 45001', 'iso_9001': 'ISO 9001', 'iso_20000_1': 'ISO 20000 1', 'iso_42001': 'ISO 42001', 'iso_37001': 'ISO 37001', 'iso_27001': 'ISO/IEC 27001 Certification', 'iso_14001': 'ISO 14001', 'iso_22000': 'ISO 22000', 'iso_13485': 'ISO 13485', 'iso_27701': 'ISO 27701', 'iso_50001': 'ISO 50001', 'iso_iec_27001': 'ISO/IEC 27001 Certification', 'HACCP': 'HACCP Food Safety Certification', 'FoodSafetycertification': 'Food Safety Certification', 'ISOawarenesstraining': 'ISO Awareness Training', 'LeadAuditorTraining': 'Lead Auditor Training', 'InternalAuditorTraining': 'Internal Auditor Training', 'CE': 'CE Mark', 'ISO8124': 'ISO 8124 Toy Safety', 'energyaudit': 'Energy Audit', 'safetyaudit': 'Safety Audit', 'ISOtraining': 'ISO Training', 'DefenceIndustry': 'Defence Industry', 'FoodandFoodProducts': 'Foodand Food Products', 'HospitalityIndustry': 'Hospitality Industry', 'TransportandLogistics': 'Transportand Logistics', 'MedicalDevices': 'Medical Devices', 'PublicSector': 'Public Sector', 'PharmaceuticalIndustry': 'Pharmaceutical Industry', 'QualityManagementSystem': 'Quality Management System', 'SolarIndustry': 'Solar Industry', 'TelecommunicationIndustry': 'Telecommunication Industry', 'AntiBriberyManagementSystem': 'Anti Bribery Management System', 'ConstructionIndustry': 'Construction Industry', 'ChemicalIndustry': 'Chemical Industry', 'ElectricalsAndElectronicsIndustry': 'Electricals And Electronics Industry', 'EducationIndustry': 'Education Industry', 'EnergyIndustry': 'Energy Industry', 'InformationTechnologyIndustry': 'Information Technology Industry', 'TextileIndustry': 'Textile Industry', 'AutomotiveIndustry': 'Automotive Industry', 'BankingAndFinance': 'Banking And Finance', 'EnvironmentalManagementSystem': 'Environmental Management System', 'HotelRestaurantAndLeisureService': 'Hotel Restaurant And Leisure Service', 'Railways': 'Railways', 'ImportAndExportIndustry': 'Import And Export Industry', 'ManufacturingIndustries': 'Manufacturing Industries', 'OilAndGasIndustry': 'Oil And Gas Industry', 'TobaccoIndustry': 'Tobacco Industry', 'TourismIndustries': 'Tourism Industries', 'OccupationalHealthAndSafetyManagementSystem': 'Occupational Health And Safety Management System'}
+
+def metadata(request):
+    name = request.resolver_match.url_name if request.resolver_match else None
+    label = PAGE_LABELS.get(name, 'TIS Certification')
+    origin = settings.SITE_URL.rstrip('/')
+    description = f"Explore {label} with TIS Certification in Kuwait. Contact our Fahaheel team about your organization’s requirements and next steps."
+    if name == 'home':
+        description = 'Established in 2018, TIS Certification provides ISO certification and training services across Kuwait and the region. Contact our Fahaheel team.'
+    hero = {'home': 'hero-certification.webp', 'gmp': 'gmp-manufacturing-hero.webp', 'iso_31000': 'iso31000-risk-hero.webp', 'iso_46001': 'iso46001-water-hero.webp'}.get(name)
+    image = static('images/' + (hero or 'logo.webp'))
+    return {'seo_title': f'{label} | TIS Certification', 'seo_description': description,
+            'canonical_url': origin + request.path, 'site_url': origin,
+            'social_image': origin + image, 'hero_preload': static('images/' + hero) if hero else '',
+            'seo_noindex': name == 'verify_certificate'}

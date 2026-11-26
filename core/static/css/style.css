@@ -1463,3 +1463,34 @@ section.text-center {
     grid-template-columns:1fr;
   }
 }
+
+/* Anniversary message wraps naturally on smaller screens. */
+.anniversary-badge {
+  display: inline-block;
+  max-width: 100%;
+  padding: .5rem .85rem;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: .5rem;
+  background: rgba(0, 0, 0, .15);
+  color: #fff;
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.custom-navbar .tis-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.tis-brand-since {
+  color: #0f2385;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .03em;
+}
+
+/* Preserve image aspect ratios when intrinsic dimensions reserve layout space. */
+img.img-fluid { height: auto; }
+img.navbar-logo { height: 53px; width: auto; }

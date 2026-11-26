@@ -8,7 +8,7 @@ from django.shortcuts import render
 from datetime import datetime
 
 def home(request):
-    home_gallery_images = [f"happy clients ({i}).jpg" for i in range(11, 19)]  # first 8 images
+    home_gallery_images = [f"happy clients ({i}).webp" for i in range(11, 19)]  # first 8 images
     return render(request, 'home.html', {
         'home_gallery_images': home_gallery_images
     })
@@ -59,7 +59,7 @@ def iso_9001(request): return render(request, 'certifications/ISO9001.html')
 def iso_20000_1(request): return render(request, 'certifications/ISO20000-1.html')
 def iso_42001(request): return render(request, 'certifications/ISO42001.html')
 def iso_37001(request): return render(request, 'certifications/ISO37001.html')
-def iso_27001(request): return render(request, 'certifications/ISO27001.html')
+def iso_27001(request): return redirect('iso_iec_27001', permanent=True)
 def iso_14001(request): return render(request, 'certifications/ISO14001.html')
 def iso_22000(request): return render(request, 'certifications/ISO22000.html')
 def iso_13485(request): return render(request, 'certifications/ISO13485.html')
@@ -169,7 +169,7 @@ def OccupationalHealthAndSafetyManagementSystem(request):
 
 
 def gallery(request):
-    images = [f"happy clients ({i}).jpg" for i in range(11, 69)]
+    images = [f"happy clients ({i}).webp" for i in range(11, 69)]
     context = {"images": images}
     return render(request, "gallery.html", context)
 
@@ -211,3 +211,15 @@ def verify_certificate(request):
             "status": status
         }
     )
+
+
+def iso_31000(request):
+    return render(request, 'certifications/ISO31000.html')
+
+
+def iso_46001(request):
+    return render(request, 'certifications/ISO46001.html')
+
+
+def gmp(request):
+    return render(request, 'certifications/gmp.html')

@@ -1,5 +1,5 @@
 .cert-hero {
-  background: url("/static/images/hospitality.png") center/cover no-repeat;
+  background: url("/static/images/hospitality.webp") center/cover no-repeat;
   height: 60vh;
   position: relative;
 }
@@ -72,7 +72,7 @@ h2{
 
 .heading{
 
-    background-image: url('/static/images/hospitality.png');
+    background-image: url('/static/images/hospitality.webp');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;

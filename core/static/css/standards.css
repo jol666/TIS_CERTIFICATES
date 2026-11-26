@@ -1,0 +1,7 @@
+/* Hero variants share the GMP service-page layout. */
+.standard-31000 .gmp-hero { background-image: linear-gradient(90deg,rgba(9,24,89,.96),rgba(9,24,89,.82) 42%,rgba(0,33,4,.12)),url('../images/iso31000-risk-hero.webp'); }
+.standard-46001 .gmp-hero { background-image: linear-gradient(90deg,rgba(9,24,89,.96),rgba(9,24,89,.82) 42%,rgba(0,33,4,.12)),url('../images/iso46001-water-hero.webp'); }
+@media(max-width:767.98px) {
+.standard-31000 .gmp-hero { background-image: linear-gradient(90deg,rgba(9,24,89,.94),rgba(9,24,89,.76)),url('../images/iso31000-risk-hero.webp'); }
+.standard-46001 .gmp-hero { background-image: linear-gradient(90deg,rgba(9,24,89,.94),rgba(9,24,89,.76)),url('../images/iso46001-water-hero.webp'); }
+}

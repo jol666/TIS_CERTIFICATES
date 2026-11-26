@@ -11,7 +11,7 @@
 <section class="py-5 gallery-section">
   <div class="container">
     <div class="text-center mb-4">
-      <h2 class="text-primary fw-bold gallery-title">Happy Clients</h2>
+      <h1 class="text-primary fw-bold gallery-title">Happy Clients</h1>
       <p class="text-muted mb-0">
         A quick look at some of our certification handovers and client interactions.
       </p>
@@ -24,7 +24,7 @@
          data-bs-toggle="modal"
          data-bs-target="#galleryModal"
          data-bs-image="{% static 'images/gallery/' %}{{ image }}">
-      <img src="{% static 'images/gallery/' %}{{ image }}" alt="{{ image }}">
+      <img src="{% static 'images/gallery/' %}{{ image }}" alt="{{ image }}" decoding="async" loading="lazy">
       <div class="gallery-overlay"><span>View Image</span></div>
     </div>
   </div>

@@ -3,42 +3,29 @@
 <html lang="en">
 <head>
   {% load static %}
-  <!-- SEO: Meta tags, Open Graph, Twitter Card, Canonical, Schema -->
-  <title>{% block title %}TIS Certifications | ISO Certification & Training{% endblock %}</title>
-  <meta name="description" content="{% block description %}TIS Certifications provides ISO certification, training, and consultancy services globally.{% endblock %}">
-  <meta name="keywords" content="ISO certification, ISO 9001, ISO 14001, ISO 45001, ISO training, TIS Certifications">
-  <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="uuvzSuHR8XVI9uIvNjVP6ZBQDdM0ZKHSZo45-IKZd3g" />
-  <link rel="canonical" href="https://tiscertificate.pythonanywhere.com{{ request.path }}">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="{% block og_title %}TIS Certifications | ISO Certification & Training{% endblock %}">
-  <meta property="og:description" content="{% block og_description %}TIS Certifications provides ISO certification, training, and consultancy services globally.{% endblock %}">
-  <meta property="og:image" content="{% static 'images/logo.png' %}">
-  <meta property="og:url" content="https://tiscertificate.pythonanywhere.com{{ request.path }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ seo_title }}</title>
+  <meta name="description" content="{{ seo_description }}">
+  <meta name="robots" content="{% if seo_noindex %}noindex, follow{% else %}index, follow{% endif %}">
+  <meta name="google-site-verification" content="uuvzSuHR8XVI9uIvNjVP6ZBQDdM0ZKHSZo45-IKZd3g">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta property="og:title" content="{{ seo_title }}">
+  <meta property="og:description" content="{{ seo_description }}">
+  <meta property="og:image" content="{{ social_image }}">
+  <meta property="og:image:alt" content="TIS Certification in Kuwait">
+  <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
+  <meta property="og:site_name" content="TIS Certification">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% block twitter_title %}TIS Certifications | ISO Certification & Training{% endblock %}">
-  <meta name="twitter:description" content="{% block twitter_description %}TIS Certifications provides ISO certification, training, and consultancy services globally.{% endblock %}">
-  <meta name="twitter:image" content="{% static 'images/logo.png' %}">
-
-  <!-- Schema.org Organization -->
+  <meta name="twitter:title" content="{{ seo_title }}">
+  <meta name="twitter:description" content="{{ seo_description }}">
+  <meta name="twitter:image" content="{{ social_image }}">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  {% if hero_preload %}<link rel="preload" as="image" href="{{ hero_preload }}">{% endif %}
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "TIS Certifications",
-    "url": "https://tiscertificate.pythonanywhere.com/",
-    "logo": "https://tiscertificate.pythonanywhere.com/static/images/logo.png",
-    "description": "TIS Certifications provides ISO certification, training, and consultancy services globally."
-  }
+  {"@context":"https://schema.org","@type":"Organization","name":"TIS Certification","url":"{{ site_url|escapejs }}/","logo":"{{ site_url|escapejs }}{% static 'images/logo.webp' %}","foundingDate":"2018","telephone":"+965 60456343","email":"cm@tiscertification.com","address":{"@type":"PostalAddress","streetAddress":"AL Anoud Complex, Floor 6, Office 606","addressLocality":"Fahaheel","addressRegion":"Al-Ahmadi","addressCountry":"KW"}}
   </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -57,8 +44,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">
-      <img src="{% static 'images/logo.png' %}" alt="TIS Certification Logo" class="navbar-logo">
+            <a class="navbar-brand tis-brand" href="{% url 'home' %}">
+      <img src="{% static 'images/logo.png' %}" alt="TIS Certification Logo" class="navbar-logo" decoding="async" width="189" height="200">
+      <span class="tis-brand-since">Since 2018</span>
     </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -93,6 +81,8 @@
             <li><a href="{% url 'iso_22301' %}">ISO 22301 Certification</a></li>
             <li><a href="{% url 'iso_41001' %}">ISO 41001 Certification</a></li>
             <li><a href="{% url 'iso_50001' %}">ISO 50001 Certification</a></li>
+            <li><a href="{% url 'iso_31000' %}">ISO 31000 Risk Management</a></li>
+            <li><a href="{% url 'iso_46001' %}">ISO 46001 Certification</a></li>
           <!-- <li><a href="{% url 'iso_13485' %}">ISO 13485 Certification</a></li>-->
             <!--<li><a href="{% url 'iso_27701' %}">ISO/IEC 27701 Certification</a></li>-->
             <!--<li><a href="{% url 'iso_21001' %}">ISO 21001 Certification</a></li>-->
@@ -126,6 +116,7 @@
           <ul class="list-unstyled">
             <li><a href="{% url 'HACCP' %}">HACCP (Hazard Analysis Critical Control Point)</a></li>
             <li><a href="{% url 'FoodSafetycertification' %}">Food Safety Certifications</a></li>
+            <li><a href="{% url 'gmp' %}">GMP (Good Manufacturing Practices)</a></li>
           </ul>
         </div>
 
@@ -281,6 +272,8 @@
           Your trusted partner in management system certifications and training.
           We help organizations achieve international quality standards with confidence.
         </p>
+        <p class="small mb-2">TIS Certification | Empowering Organizations Since 2018</p>
+        <p class="small fw-bold mb-0">Established in 2018 | 8 Years of Excellence</p>
       </div>
 
       <!-- Quick Links -->
@@ -319,7 +312,7 @@
 
     <!-- Bottom Note -->
     <div class="text-center small">
-      <p class="mb-0">© {{ now.year }} TIS Certification. All rights reserved.</p>
+      <p class="mb-0">© 2018–2026 TIS Certification. All rights reserved.</p>
 
     </div>
   </div>

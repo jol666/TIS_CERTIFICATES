@@ -1,5 +1,5 @@
 .cert-hero {
-  background: url("/static/images/foodandfoodproducts.png") center/cover no-repeat;
+  background: url("/static/images/foodandfoodproducts.webp") center/cover no-repeat;
   height: 60vh;
   position: relative;
 }
@@ -72,7 +72,7 @@ h2{
 
 .heading{
 
-    background-image: url('/static/images/foodandfoodproducts.png');
+    background-image: url('/static/images/foodandfoodproducts.webp');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;

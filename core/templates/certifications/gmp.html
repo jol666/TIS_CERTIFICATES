@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}GMP Certification – Good Manufacturing Practices | TIS Certification{% endblock %}
+{% block meta_description %}Explore GMP assessment with TIS Certification in Kuwait. Strengthen manufacturing practices, hygiene controls and confidence in your production processes.{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+<link rel="stylesheet" href="{% static 'css/gmp.css' %}">
+{% endblock %}
+{% block content %}
+<div class="gmp-page">
+<section class="gmp-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb"><ol class="breadcrumb mb-4">
+      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+      <li class="breadcrumb-item"><a href="{% url 'certifications' %}">Certifications</a></li>
+      <li class="breadcrumb-item active" aria-current="page">GMP</li>
+    </ol></nav>
+    <div class="gmp-hero-copy">
+      <p class="gmp-eyebrow">Good Manufacturing Practices</p>
+      <h1>Quality begins with<br>the way you manufacture.</h1>
+      <p class="lead">Build confidence in your production processes with GMP assessment. Bring hygiene, people and process controls together for more consistent manufacturing.</p>
+      <a class="btn btn-light fw-bold px-4 py-3" href="{% url 'contact' %}">Discuss Your GMP Requirements</a>
+    </div>
+  </div>
+</section>
+<section class="gmp-section">
+  <div class="container"><div class="row g-5 align-items-start">
+    <div class="col-lg-4"><p class="gmp-kicker">A foundation for quality</p><h2>What is GMP?</h2></div>
+    <div class="col-lg-8"><p class="lead">Good Manufacturing Practices establish the conditions and working methods that support consistent production and product quality.</p><p>They address the manufacturing environment, equipment, personnel, records and operational controls. The applicable requirements depend on your products, industry and destination market.</p><p>For food businesses, sound manufacturing and hygiene practices provide a foundation for systems such as HACCP and ISO 22000. TIS Certification is based in Kuwait; contact our team to discuss your site, products and assessment needs.</p></div>
+  </div></div>
+</section>
+<section class="gmp-section gmp-tint">
+  <div class="container"><p class="gmp-kicker">From premises to production</p><h2 class="mb-4">What does a GMP assessment cover?</h2>
+    <div class="row g-4">
+      <div class="col-md-6"><h3>Premises &amp; equipment</h3><p>Suitable layouts, maintained equipment and cleaning arrangements that help protect products from contamination.</p></div>
+      <div class="col-md-6"><h3>People &amp; hygiene</h3><p>Clear responsibilities, appropriate protective clothing, personnel hygiene and training relevant to each role.</p></div>
+      <div class="col-md-6"><h3>Production &amp; records</h3><p>Documented working methods, material identification and records that make production activities traceable.</p></div>
+      <div class="col-md-6"><h3>Review &amp; corrective action</h3><p>Processes for investigating problems, addressing their causes and checking that corrective actions work.</p></div>
+    </div>
+  </div>
+</section>
+<section class="gmp-section">
+  <div class="container"><div class="row g-5">
+    <div class="col-lg-5"><p class="gmp-kicker">Better control, greater confidence</p><h2>Why focus on GMP?</h2><p>Strong everyday practices help your team maintain standards as production demands change.</p></div>
+    <div class="col-lg-7"><ul class="gmp-benefits">
+      <li><strong>More consistent operations.</strong> Give teams clear procedures for the work they perform.</li>
+      <li><strong>Stronger hygiene controls.</strong> Address contamination risks through the design and upkeep of your workplace.</li>
+      <li><strong>Clearer evidence.</strong> Keep organized records for internal review and customer assessments.</li>
+      <li><strong>Continuous improvement.</strong> Use findings to prioritize action and review progress.</li>
+    </ul></div>
+  </div></div>
+</section>
+<section class="gmp-section gmp-tint">
+  <div class="container"><p class="gmp-kicker">Your assessment journey</p><h2 class="mb-4">Preparing for GMP assessment</h2>
+    <ol class="gmp-steps">
+      <li><h3>Define the scope</h3><p>Share your product range, manufacturing activities and customer requirements to identify the relevant assessment criteria.</p></li>
+      <li><h3>Prepare your evidence</h3><p>Review procedures, training, maintenance and production records before the assessment.</p></li>
+      <li><h3>Assess site practices</h3><p>The assessment reviews documentation and how controls operate in the manufacturing environment.</p></li>
+      <li><h3>Address the findings</h3><p>Resolve identified gaps and provide supporting evidence. Certification arrangements depend on the selected scheme and assessment outcome.</p></li>
+    </ol>
+  </div>
+</section>
+<section class="gmp-section">
+  <div class="container"><div class="row g-5">
+    <div class="col-lg-4"><p class="gmp-kicker">Before you begin</p><h2>Common questions</h2></div>
+    <div class="col-lg-8 gmp-faq">
+      <details open><summary>Which businesses can use GMP?</summary><p>GMP is relevant to manufacturing sectors including food, pharmaceuticals and medical devices. Each sector has different requirements; discuss your products and market before selecting a scheme.</p></details>
+      <details><summary>Is GMP the same as ISO 22000?</summary><p>No. GMP focuses on manufacturing practices and conditions. ISO 22000 addresses a food safety management system. They can support complementary objectives.</p></details>
+      <details><summary>Does certification replace regulatory approval?</summary><p>A third-party assessment does not replace any required licence or regulatory inspection. The scope and recognition of an assessment should be confirmed for your intended market.</p></details>
+      <details><summary>How long does an assessment take?</summary><p>Timing depends on site size, scope, readiness and any corrective actions. Contact TIS with your requirements to discuss the next steps.</p></details>
+    </div>
+  </div></div>
+</section>
+<section class="gmp-cta text-white text-center"><div class="container">
+  <h2>Take the next step towards better manufacturing.</h2><p>Tell us about your facility and the requirements you need to meet.</p>
+  <a class="btn btn-light fw-bold px-4 py-3" href="{% url 'contact' %}">Contact TIS Certification</a>
+  <div class="mt-4 gmp-related">Related services: <a href="{% url 'HACCP' %}">HACCP</a> <span aria-hidden="true">/</span> <a href="{% url 'iso_22000' %}">ISO 22000</a></div>
+</div></section>
+</div>
+{% endblock %}
